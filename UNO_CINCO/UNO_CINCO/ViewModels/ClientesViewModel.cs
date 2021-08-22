@@ -19,7 +19,7 @@ namespace UNO_CINCO.ViewModels
 
         public ClientesViewModel()
         {
-            Title = "Browse";
+            Title = "Clientes";
             Items = new ObservableCollection<Clientes>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
@@ -72,13 +72,13 @@ namespace UNO_CINCO.ViewModels
             await Shell.Current.GoToAsync(nameof(NewClientePage));
         }
 
-        async void OnItemSelected(Clientes item)
+        private async void OnItemSelected(Clientes item)
         {
             if (item == null)
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ClienteDetailPage)}?{nameof(ClienteDetailViewModel.LoadItemId)}={item.codigo}");
+            await Shell.Current.GoToAsync($"{nameof(ClienteDetailPage)}?{nameof(ClienteDetailViewModel.Codigo)}={item.Codigo}");
         }
     }
 }

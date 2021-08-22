@@ -7,9 +7,22 @@ using UNO_CINCO.Models;
 
 namespace UNO_CINCO.Services
 {
-    class ClienteService : IDataStore<Clientes>
+    public class ClienteService : IDataStore<Clientes>
     {
         readonly List<Clientes> clientes;
+
+        public ClienteService()
+        {
+            clientes = new List<Clientes>()
+            {
+                new Clientes { Codigo = "12311", Nombre = "Empresa 1" },
+                new Clientes { Codigo=  "12312", Nombre = "Empresa 2" },
+                new Clientes { Codigo = "12313", Nombre = "Empresa 3" },
+                new Clientes { Codigo = "12314", Nombre = "Empresa 4"},
+                new Clientes { Codigo = "12315", Nombre = "Empresa 5" },
+                new Clientes { Codigo = "12316", Nombre = "Empresa 6" }
+            };
+        }
 
         public async Task<bool> AddItemAsync(Clientes cliente)
         {
@@ -20,7 +33,7 @@ namespace UNO_CINCO.Services
 
         public async Task<bool> DeleteItemAsync(string codigo)
         {
-            var oldItem = clientes.Where((Clientes arg) => arg.codigo == codigo).FirstOrDefault();
+            var oldItem = clientes.Where((Clientes arg) => arg.Codigo == codigo).FirstOrDefault();
             clientes.Remove(oldItem);
 
             return await Task.FromResult(true);
@@ -28,7 +41,7 @@ namespace UNO_CINCO.Services
 
         public async Task<Clientes> GetItemAsync(string codigo)
         {
-            return await Task.FromResult(clientes.FirstOrDefault(s => s.codigo == codigo));
+            return await Task.FromResult(clientes.FirstOrDefault(s => s.Codigo == codigo));
         }
 
         public async Task<IEnumerable<Clientes>> GetItemsAsync(bool forceRefresh = false)
@@ -38,7 +51,7 @@ namespace UNO_CINCO.Services
 
         async Task<bool> IDataStore<Clientes>.UpdateItemAsync(Clientes cliente)
         {
-            var oldItem = clientes.Where((Clientes arg) => arg.codigo == cliente.codigo).FirstOrDefault();
+            var oldItem = clientes.Where((Clientes arg) => arg.Codigo == cliente.Codigo).FirstOrDefault();
             clientes.Remove(oldItem);
             clientes.Add(cliente);
 

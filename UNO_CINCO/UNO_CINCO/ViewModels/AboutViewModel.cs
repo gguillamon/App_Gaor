@@ -9,7 +9,7 @@ namespace UNO_CINCO.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "Conoce Gaor";
+            Title = "GAOR TM";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://www.gaortm.es/"));
         }
 

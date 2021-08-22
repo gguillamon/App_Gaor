@@ -6,22 +6,22 @@ namespace UNO_CINCO.Models
     {
         
 
-        public string codigo { get; set; }
-        public string Codigo { get; internal set; }
-        public string razon { get; set; }
-        public string Razon { get; internal set; }
-        public string nombre { get; set; }
-        public string alias { get; set; }
-        public string email { get; set; }
-        public string direccion { get; set; }
-        public string localidad { get; set; }
-        public string provincia { get; set; }
-        public string cp { get; set; }
-        public string pais { get; set; }
-        public string telefono1{ get; set; }
-        public string telefono2 { get; set; }
-        public string fax { get; set; }
-        public string web { get; set; }
+        public string Codigo { get; set; }
+        public string Razon { get; set; }
+        public string Nombre { get; set; }
+        public string Alias { get; set; }
+        public string Email { get; set; }
+        public string Direccion { get; set; }
+        public string Localidad { get; set; }
+        public string Provincia { get; set; }
+        public string Cp { get; set; }
+        public string Pais { get; set; }
+        public string Telefono1{ get; set; }
+        public string Telefono2 { get; set; }
+        public string Fax { get; set; }
+        public string Web { get; set; }
+        
+        
 
     
     }

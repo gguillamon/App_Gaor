@@ -34,8 +34,8 @@ namespace UNO_CINCO.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(codigo)
-                && !String.IsNullOrWhiteSpace(nombre);
+            return !String.IsNullOrWhiteSpace(Codigo)
+                && !String.IsNullOrWhiteSpace(Nombre);
         }
         public string Codigo
         {
@@ -131,31 +131,34 @@ namespace UNO_CINCO.ViewModels
 
         private async void OnSave()
         {
-           /* Clientes newItem = new Clientes()
+            Clientes newItem = new Clientes()
             {
-                Codigo = Guid.NewGuid().ToString(),
-                razon = newItem.Razon,
+                Codigo = Codigo,
+                Razon = Razon,
                 Nombre = Nombre,
                 Alias = Alias,
                 Email = Email,
                 Direccion = Direccion,
                 Localidad = Localidad,
-                provincia = Provincia,
-                cp = Cp,
-                pais = Pais,
-                telefono1 = Telefono1,
-                telefono2 = Telefono2,
-                fax = Fax,
-                web = Web
-                
+                Provincia = Provincia,
+                Cp = Cp,
+                Pais = Pais,
+                Telefono1 = Telefono1,
+                Telefono2 = Telefono2,
+                Fax = Fax,
+                Web = Web
 
-                
             };
+         
+
+
+
+            
 
             await DataStore.AddItemAsync(newItem);
 
             // This will pop the current page off the navigation stack
-            await Shell.Current.GoToAsync("..");*/
+            await Shell.Current.GoToAsync("..");
         }
     }
 }

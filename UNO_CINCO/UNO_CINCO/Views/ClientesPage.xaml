@@ -21,11 +21,11 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10" x:DataType="model:Clientes">
-                        <Label Text="{Binding codigo}" 
+                        <Label Text="{Binding Codigo}" 
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
                             FontSize="16" />
-                        <Label Text="{Binding nombre}" 
+                        <Label Text="{Binding Nombre}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="13" />

@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace UNO_CINCO.ViewModels
 {
-    [QueryProperty(nameof(codigo), nameof(codigo))]
+    [QueryProperty(nameof(Codigo), nameof(Codigo))]
     public class ClienteDetailViewModel : BaseViewModel
     {
         private string codigo;
@@ -108,20 +108,20 @@ namespace UNO_CINCO.ViewModels
             try
             {
                 var item = await DataStore.GetItemAsync(itemId);
-                codigo = item.codigo;
-                razon = item.razon;
-                nombre = item.nombre;
-                alias = item.alias;
-                email = item.email;
-                direccion = item.direccion;
-                localidad = item.localidad;
-                provincia = item.provincia;
-                cp = item.cp;
-                pais = item.pais;
-                telefono1 = item.telefono1;
-                telefono2 = item.telefono2;
-                fax = item.fax;
-                web = item.web;
+                codigo = item.Codigo;
+                razon = item.Razon;
+                nombre = item.Nombre;
+                alias = item.Alias;
+                email = item.Email;
+                direccion = item.Direccion;
+                localidad = item.Localidad;
+                provincia = item.Provincia;
+                cp = item.Cp;
+                pais = item.Pais;
+                telefono1 = item.Telefono1;
+                telefono2 = item.Telefono2;
+                fax = item.Fax;
+                web = item.Web;
     }
             catch (Exception)
             {

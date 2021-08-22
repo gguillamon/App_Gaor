@@ -6,13 +6,13 @@ namespace UNO_CINCO.Models
 {
     class Contactos
     {
-        public string id { get; set; }
-        public string nombre { get; set; }
-        public string telefono1 { get; set; }
-        public string telefono2 { get; set; }
-        public string telefono3 { get; set; }
-        public string email { get; set; }
-        public string codigoEmpresa { get; set; }
+        public string Id { get; set; }
+        public string Nombre { get; set; }
+        public string Telefono1 { get; set; }
+        public string Telefono2 { get; set; }
+        public string Telefono3 { get; set; }
+        public string Email { get; set; }
+        public string CodigoEmpresa { get; set; }
 
 
 

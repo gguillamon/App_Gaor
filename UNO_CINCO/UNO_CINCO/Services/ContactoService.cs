@@ -20,7 +20,7 @@ namespace UNO_CINCO.Services
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var oldItem = contactos.Where((Contactos arg) => arg.id == id).FirstOrDefault();
+            var oldItem = contactos.Where((Contactos arg) => arg.Id == id).FirstOrDefault();
             contactos.Remove(oldItem);
 
             return await Task.FromResult(true);
@@ -28,7 +28,7 @@ namespace UNO_CINCO.Services
 
         public async Task<Contactos> GetItemAsync(string id)
         {
-            return await Task.FromResult(contactos.FirstOrDefault(s => s.id == id));
+            return await Task.FromResult(contactos.FirstOrDefault(s => s.Id == id));
         }
 
         public async Task<IEnumerable<Contactos>> GetItemsAsync(bool forceRefresh = false)
@@ -38,7 +38,7 @@ namespace UNO_CINCO.Services
 
         async Task<bool> IDataStore<Contactos>.UpdateItemAsync(Contactos contacto)
         {
-            var oldItem = contactos.Where((Contactos arg) => arg.id == contacto.id).FirstOrDefault();
+            var oldItem = contactos.Where((Contactos arg) => arg.Id == contacto.Id).FirstOrDefault();
             contactos.Remove(oldItem);
             contactos.Add(contacto);
 
