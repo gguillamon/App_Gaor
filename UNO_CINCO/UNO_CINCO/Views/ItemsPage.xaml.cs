@@ -12,11 +12,11 @@ using Xamarin.Forms.Xaml;
 
 namespace UNO_CINCO.Views
 {
-    public partial class ItemsPage : ContentPage
+    public partial class ClientesPage : ContentPage
     {
         ClientesViewModel _viewModel;
 
-        public ItemsPage()
+        public ClientesPage()
         {
             InitializeComponent();
 
