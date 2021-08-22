@@ -69,7 +69,7 @@ namespace UNO_CINCO.ViewModels
 
         private async void OnAddItem(object obj)
         {
-            await Shell.Current.GoToAsync(nameof(NewItemPage));
+            await Shell.Current.GoToAsync(nameof(NewClientePage));
         }
 
         async void OnItemSelected(Clientes item)
@@ -78,7 +78,7 @@ namespace UNO_CINCO.ViewModels
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ClienteDetailViewModel.LoadItemId)}={item.codigo}");
+            await Shell.Current.GoToAsync($"{nameof(ClienteDetailPage)}?{nameof(ClienteDetailViewModel.LoadItemId)}={item.codigo}");
         }
     }
 }

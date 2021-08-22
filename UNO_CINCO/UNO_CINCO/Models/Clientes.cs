@@ -7,7 +7,9 @@ namespace UNO_CINCO.Models
         
 
         public string codigo { get; set; }
+        public string Codigo { get; internal set; }
         public string razon { get; set; }
+        public string Razon { get; internal set; }
         public string nombre { get; set; }
         public string alias { get; set; }
         public string email { get; set; }

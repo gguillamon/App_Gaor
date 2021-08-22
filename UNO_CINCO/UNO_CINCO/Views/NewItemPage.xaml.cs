@@ -8,14 +8,16 @@ using Xamarin.Forms.Xaml;
 
 namespace UNO_CINCO.Views
 {
-    public partial class NewItemPage : ContentPage
+    public partial class NewClientePage : ContentPage
     {
         public Clientes Item { get; set; }
 
-        public NewItemPage()
+        public NewClientePage()
         {
             InitializeComponent();
-            BindingContext = new NewItemViewModel();
+            BindingContext = new NewClienteViewModel();
         }
+
+       
     }
 }

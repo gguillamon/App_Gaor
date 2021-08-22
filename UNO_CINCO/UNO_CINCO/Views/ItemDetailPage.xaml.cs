@@ -4,12 +4,12 @@ using Xamarin.Forms;
 
 namespace UNO_CINCO.Views
 {
-    public partial class ItemDetailPage : ContentPage
+    public partial class ClienteDetailPage : ContentPage
     {
-        public ItemDetailPage()
+        public ClienteDetailPage()
         {
             InitializeComponent();
-            BindingContext = new ItemDetailViewModel();
+            BindingContext = new ClienteDetailViewModel();
         }
     }
 }

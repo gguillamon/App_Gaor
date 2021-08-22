@@ -9,8 +9,8 @@ namespace UNO_CINCO.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            Title = "Conoce Gaor";
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://www.gaortm.es/"));
         }
 
         public ICommand OpenWebCommand { get; }

@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Input;
 using UNO_CINCO.Models;
 using Xamarin.Forms;
 
 namespace UNO_CINCO.ViewModels
 {
-    [QueryProperty(nameof(codigo), nameof(codigo))]
-    public class ClienteDetailViewModel : BaseViewModel
+    public class NewClienteViewModel : BaseViewModel
     {
-        private string codigo;
+        public string codigo;
         private string razon;
         private string nombre;
         public string alias;
@@ -24,6 +24,19 @@ namespace UNO_CINCO.ViewModels
         private string fax;
         private string web;
 
+        public NewClienteViewModel()
+        {
+            SaveCommand = new Command(OnSave, ValidateSave);
+            CancelCommand = new Command(OnCancel);
+            this.PropertyChanged +=
+                (_, __) => SaveCommand.ChangeCanExecute();
+        }
+
+        private bool ValidateSave()
+        {
+            return !String.IsNullOrWhiteSpace(codigo)
+                && !String.IsNullOrWhiteSpace(nombre);
+        }
         public string Codigo
         {
             get
@@ -33,7 +46,7 @@ namespace UNO_CINCO.ViewModels
             set
             {
                 codigo = value;
-                LoadItemId(value);
+                
             }
         }
         public string Razon
@@ -52,81 +65,97 @@ namespace UNO_CINCO.ViewModels
             get => alias;
             set => SetProperty(ref nombre, value);
         }
-        public string Email 
+        public string Email
         {
             get => email;
             set => SetProperty(ref email, value);
         }
-        public string Direccion 
+        public string Direccion
         {
             get => direccion;
             set => SetProperty(ref direccion, value);
         }
-        public string Localidad 
-        { 
+        public string Localidad
+        {
             get => localidad;
             set => SetProperty(ref localidad, value);
         }
-        public string Provincia 
-        { 
+        public string Provincia
+        {
             get => provincia;
             set => SetProperty(ref provincia, value);
         }
-        public string Cp 
-        { 
+        public string Cp
+        {
             get => cp;
             set => SetProperty(ref cp, value);
         }
-        public string Pais 
+        public string Pais
         {
             get => pais;
             set => SetProperty(ref pais, value);
         }
-        public string Telefono1 
-        {   
+        public string Telefono1
+        {
             get => telefono1;
             set => SetProperty(ref telefono1, value);
         }
-        public string Telefono2 
-        { 
+        public string Telefono2
+        {
             get => telefono2;
             set => SetProperty(ref telefono2, value);
         }
-        public string Fax 
-        { 
+        public string Fax
+        {
             get => fax;
             set => SetProperty(ref fax, value);
         }
-        public string Web 
+        public string Web
         {
             get => web;
             set => SetProperty(ref web, value);
         }
 
-        public async void LoadItemId(string itemId)
+
+
+
+
+        public Command SaveCommand { get; }
+        public Command CancelCommand { get; }
+
+        private async void OnCancel()
         {
-            try
+            // This will pop the current page off the navigation stack
+            await Shell.Current.GoToAsync("..");
+        }
+
+        private async void OnSave()
+        {
+           /* Clientes newItem = new Clientes()
             {
-                var item = await DataStore.GetItemAsync(itemId);
-                codigo = item.codigo;
-                razon = item.razon;
-                nombre = item.nombre;
-                alias = item.alias;
-                email = item.email;
-                direccion = item.direccion;
-                localidad = item.localidad;
-                provincia = item.provincia;
-                cp = item.cp;
-                pais = item.pais;
-                telefono1 = item.telefono1;
-                telefono2 = item.telefono2;
-                fax = item.fax;
-                web = item.web;
-    }
-            catch (Exception)
-            {
-                Debug.WriteLine("Error al leer registro");
-            }
+                Codigo = Guid.NewGuid().ToString(),
+                razon = newItem.Razon,
+                Nombre = Nombre,
+                Alias = Alias,
+                Email = Email,
+                Direccion = Direccion,
+                Localidad = Localidad,
+                provincia = Provincia,
+                cp = Cp,
+                pais = Pais,
+                telefono1 = Telefono1,
+                telefono2 = Telefono2,
+                fax = Fax,
+                web = Web
+                
+
+                
+            };
+
+            await DataStore.AddItemAsync(newItem);
+
+            // This will pop the current page off the navigation stack
+            await Shell.Current.GoToAsync("..");*/
         }
     }
 }
