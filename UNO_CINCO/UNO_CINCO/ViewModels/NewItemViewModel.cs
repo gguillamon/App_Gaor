@@ -49,7 +49,7 @@ namespace UNO_CINCO.ViewModels
 
         private async void OnSave()
         {
-            Clientes newItem = new Clientes()
+            /*Clientes newItem = new Clientes()
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,
@@ -59,7 +59,7 @@ namespace UNO_CINCO.ViewModels
             await DataStore.AddItemAsync(newItem);
 
             // This will pop the current page off the navigation stack
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync("..");*/
         }
     }
 }

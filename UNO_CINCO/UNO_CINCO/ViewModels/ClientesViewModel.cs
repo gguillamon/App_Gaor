@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace UNO_CINCO.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class ClientesViewModel : BaseViewModel
     {
         private Clientes _selectedItem;
 
@@ -17,7 +17,7 @@ namespace UNO_CINCO.ViewModels
         public Command AddItemCommand { get; }
         public Command<Clientes> ItemTapped { get; }
 
-        public ItemsViewModel()
+        public ClientesViewModel()
         {
             Title = "Browse";
             Items = new ObservableCollection<Clientes>();
@@ -78,7 +78,7 @@ namespace UNO_CINCO.ViewModels
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ClienteDetailViewModel.LoadItemId)}={item.codigo}");
         }
     }
 }

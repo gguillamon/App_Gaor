@@ -13,7 +13,7 @@ namespace UNO_CINCO
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            DependencyService.Register<ClienteService>();
             MainPage = new AppShell();
         }
 

@@ -20,21 +20,5 @@ namespace UNO_CINCO.Models
         public byte [] firmaUser { get; set; }
         public byte[] firmaCliente { get; set; }
 
-        public PartesAsistencia(string idParte, string codigoEmpresa, string usuario, DateTime inicio, DateTime fin, DateTime fecha, string contactoId, string tipoAsistencia, string mantenimiento, string tipoCliente, string descripcion, byte[] firmaUser, byte[] firmaCliente)
-        {
-            this.idParte = idParte;
-            this.codigoEmpresa = codigoEmpresa;
-            this.usuario = usuario;
-            this.inicio = inicio;
-            this.fin = fin;
-            this.fecha = fecha;
-            this.contactoId = contactoId;
-            this.tipoAsistencia = tipoAsistencia;
-            Mantenimiento = mantenimiento;
-            this.tipoCliente = tipoCliente;
-            this.descripcion = descripcion;
-            this.firmaUser = firmaUser;
-            this.firmaCliente = firmaCliente;
-        }
     }
 }

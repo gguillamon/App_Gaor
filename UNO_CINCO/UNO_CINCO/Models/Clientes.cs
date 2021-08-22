@@ -21,22 +21,6 @@ namespace UNO_CINCO.Models
         public string fax { get; set; }
         public string web { get; set; }
 
-        public Clientes(string codigo, string razon, string nombre, string alias, string email, string direccion, string localidad, string provincia, string cp, string pais, string telefono1, string telefono2, string fax, string web)
-        {
-            this.codigo = codigo;
-            this.razon = razon;
-            this.nombre = nombre;
-            this.alias = alias;
-            this.email = email;
-            this.direccion = direccion;
-            this.localidad = localidad;
-            this.provincia = provincia;
-            this.cp = cp;
-            this.pais = pais;
-            this.telefono1 = telefono1;
-            this.telefono2 = telefono2;
-            this.fax = fax;
-            this.web = web;
-        }
+    
     }
 }

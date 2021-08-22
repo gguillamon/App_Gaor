@@ -14,13 +14,13 @@ namespace UNO_CINCO.Views
 {
     public partial class ItemsPage : ContentPage
     {
-        ItemsViewModel _viewModel;
+        ClientesViewModel _viewModel;
 
         public ItemsPage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            BindingContext = _viewModel = new ClientesViewModel();
         }
 
         protected override void OnAppearing()
