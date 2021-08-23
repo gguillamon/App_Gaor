@@ -10,7 +10,7 @@ namespace UNO_CINCO.ViewModels
 {
     public class ClientesViewModel : BaseViewModel
     {
-        private Clientes _selectedItem;
+        public Clientes _selectedItem;
 
         public ObservableCollection<Clientes> Items { get; }
         public Command LoadItemsCommand { get; }
@@ -78,7 +78,7 @@ namespace UNO_CINCO.ViewModels
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ClienteDetailPage)}?{nameof(ClienteDetailViewModel.Codigo)}={item.Codigo}");
+            await Shell.Current.GoToAsync($"{nameof(ClienteDetailPage)}?{nameof(ClienteDetailViewModel.ItemId)}={item.Codigo}");
         }
     }
 }

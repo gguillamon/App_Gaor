@@ -6,10 +6,10 @@ using Xamarin.Forms;
 
 namespace UNO_CINCO.ViewModels
 {
-    [QueryProperty(nameof(Codigo), nameof(Codigo))]
+    [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ClienteDetailViewModel : BaseViewModel
     {
-        private string codigo;
+        private string itemId;
         private string razon;
         private string nombre;
         public string alias;
@@ -23,19 +23,22 @@ namespace UNO_CINCO.ViewModels
         private string telefono2;
         private string fax;
         private string web;
+        public string Codigo { get; set; }
 
-        public string Codigo
+        public string ItemId
         {
+
             get
             {
-                return codigo;
+                return itemId;
             }
             set
             {
-                codigo = value;
+                itemId = value;
                 LoadItemId(value);
             }
         }
+       
         public string Razon
         {
             get => razon;
@@ -108,20 +111,20 @@ namespace UNO_CINCO.ViewModels
             try
             {
                 var item = await DataStore.GetItemAsync(itemId);
-                codigo = item.Codigo;
-                razon = item.Razon;
-                nombre = item.Nombre;
-                alias = item.Alias;
-                email = item.Email;
-                direccion = item.Direccion;
-                localidad = item.Localidad;
-                provincia = item.Provincia;
-                cp = item.Cp;
-                pais = item.Pais;
-                telefono1 = item.Telefono1;
-                telefono2 = item.Telefono2;
-                fax = item.Fax;
-                web = item.Web;
+                Codigo = item.Codigo;
+                Razon = item.Razon;
+                Nombre = item.Nombre;
+                Alias = item.Alias;
+                Email = item.Email;
+                Direccion = item.Direccion;
+                Localidad = item.Localidad;
+                Provincia = item.Provincia;
+                Cp = item.Cp;
+                Pais = item.Pais;
+                Telefono1 = item.Telefono1;
+                Telefono2 = item.Telefono2;
+                Fax = item.Fax;
+                Web = item.Web;
     }
             catch (Exception)
             {
