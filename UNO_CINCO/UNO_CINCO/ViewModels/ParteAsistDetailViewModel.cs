@@ -112,7 +112,7 @@ namespace UNO_CINCO.ViewModels
         {
             try
             {
-                var item = await DataStore.GetItemAsync(itemId);
+                var item = await DataStorePartes.GetItemAsync(itemId);
                 IdParte = item.IdParte;
                 CodigoEmpresa = item.CodigoEmpresa;
                 Usuario = item.Usuario;

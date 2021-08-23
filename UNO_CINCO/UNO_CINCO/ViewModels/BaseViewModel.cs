@@ -11,7 +11,9 @@ namespace UNO_CINCO.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<Clientes> DataStore => DependencyService.Get<IDataStore<Clientes>>();
-        
+        public IDataStore<PartesAsistencia> DataStorePartes => DependencyService.Get<IDataStore<PartesAsistencia>>();
+
+
 
 
         bool isBusy = false;

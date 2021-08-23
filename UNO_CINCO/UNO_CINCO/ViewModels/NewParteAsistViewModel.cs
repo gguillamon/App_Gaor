@@ -148,7 +148,7 @@ namespace UNO_CINCO.ViewModels
 
 
 
-            await DataStore.AddItemAsync(newItem);
+            await DataStorePartes.AddItemAsync(newItem);
 
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");

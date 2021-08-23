@@ -13,6 +13,8 @@ namespace UNO_CINCO
             InitializeComponent();
             Routing.RegisterRoute(nameof(ClienteDetailPage), typeof(ClienteDetailPage));
             Routing.RegisterRoute(nameof(NewClientePage), typeof(NewClientePage));
+            Routing.RegisterRoute(nameof(ParteAsistDetailPage), typeof(ParteAsistDetailPage));
+            Routing.RegisterRoute(nameof(NewPartesAsistPage), typeof(NewPartesAsistPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
