@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="UNO_CINCO.Views.NewParteAsistDetailPage"
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Numero de parte:" FontSize="Medium" />
+        <Label Text="{Binding IdParte}" FontSize="Small"/>
+        <Label Text="Empresa:" FontSize="Medium" />
+        <Label Text="{Binding CodigoEmpresa}" FontSize="Small"/>
+        <Label Text="Realizado por:" FontSize="Medium" />
+        <Label Text="{Binding Usuario}" FontSize="Small"/>
+        <Label Text="Fecha:" FontSize="Medium" />
+        <Label Text="{Binding Fecha}" FontSize="Small"/>
+    </StackLayout>
+
+</ContentPage>

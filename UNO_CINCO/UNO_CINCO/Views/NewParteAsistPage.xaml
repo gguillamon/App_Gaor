@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UNO_CINCO.Views.NewPartesAsistPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Id" FontSize="Medium" />
+            <Entry Text="{Binding IdParte, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Empresa" FontSize="Medium" />
+            <Editor Text="{Binding CodigoEmpresa, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <Label Text="Realizado por" FontSize="Medium" />
+            <Entry Text="{Binding Usuario, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Hora inicio" FontSize="Medium" />
+            <Editor Text="{Binding Inicio, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <Label Text="Hora fin" FontSize="Medium" />
+            <Editor Text="{Binding Fin, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <Label Text="Fecha" FontSize="Medium" />
+            <Editor Text="{Binding Fecha, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cancelar" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Guardar" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -9,10 +9,10 @@ namespace UNO_CINCO.ViewModels
 {
     public class NewClienteViewModel : BaseViewModel
     {
-        public string codigo;
+        private string codigo;
         private string razon;
         private string nombre;
-        public string alias;
+        private string alias;
         private string email;
         private string direccion;
         private string localidad;
@@ -143,11 +143,6 @@ namespace UNO_CINCO.ViewModels
 
             };
          
-
-
-
-            
-
             await DataStore.AddItemAsync(newItem);
 
             // This will pop the current page off the navigation stack

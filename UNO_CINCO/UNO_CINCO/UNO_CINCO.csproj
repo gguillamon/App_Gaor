@@ -21,5 +21,20 @@
     <Compile Update="Views\NewClientePage.xaml.cs">
       <DependentUpon>NewClientePage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\ParteAsistDetailPage.xaml.cs">
+      <DependentUpon>ParteAsistDetailPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\ParteAsistDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NewParteAsistPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ParteAsistenciaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
