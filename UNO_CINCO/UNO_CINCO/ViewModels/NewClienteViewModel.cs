@@ -39,15 +39,8 @@ namespace UNO_CINCO.ViewModels
         }
         public string Codigo
         {
-            get
-            {
-                return codigo;
-            }
-            set
-            {
-                codigo = value;
-                
-            }
+            get => codigo;
+            set => SetProperty(ref codigo, value);
         }
         public string Razon
         {

@@ -13,6 +13,10 @@
             <Entry Text="{Binding Codigo, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="Nombre" FontSize="Medium" />
             <Editor Text="{Binding Nombre, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <Label Text="Email" FontSize="Medium" />
+            <Entry Text="{Binding Email, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Telf" FontSize="Medium" />
+            <Editor Text="{Binding Telefono1, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Cancelar" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Guardar" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>

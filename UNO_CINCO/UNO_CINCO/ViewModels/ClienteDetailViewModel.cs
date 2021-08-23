@@ -10,6 +10,7 @@ namespace UNO_CINCO.ViewModels
     public class ClienteDetailViewModel : BaseViewModel
     {
         private string itemId;
+        private string codigo;
         private string razon;
         private string nombre;
         public string alias;
@@ -23,7 +24,7 @@ namespace UNO_CINCO.ViewModels
         private string telefono2;
         private string fax;
         private string web;
-        public string Codigo { get; set; }
+        
 
         public string ItemId
         {
@@ -37,6 +38,11 @@ namespace UNO_CINCO.ViewModels
                 itemId = value;
                 LoadItemId(value);
             }
+        }
+        public string Codigo
+        {
+            get => codigo;
+            set => SetProperty(ref codigo, value);
         }
        
         public string Razon

@@ -9,6 +9,10 @@
         <Label Text="{Binding Codigo}" FontSize="Small"/>
         <Label Text="Nombre:" FontSize="Medium" />
         <Label Text="{Binding Nombre}" FontSize="Small"/>
+        <Label Text="Email:" FontSize="Medium" />
+        <Label Text="{Binding Email}" FontSize="Small"/>
+        <Label Text="Telf:" FontSize="Medium" />
+        <Label Text="{Binding Telefono1}" FontSize="Small"/>
     </StackLayout>
     
 </ContentPage>
