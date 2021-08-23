@@ -82,15 +82,15 @@
     <FlyoutItem Title="Inicio" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Partes Trabajo" Icon="icon_about.png">
+    <FlyoutItem Title="Partes Trabajo" Icon="parte_trabajo_24dp.png">
         <ShellContent Route="ParteAsistenciaPage" ContentTemplate="{DataTemplate local:ParteAsistenciaPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Clientes" Icon="icon_feed.png">
+    <FlyoutItem Title="Clientes" Icon="outline_contact_24dp.png">
         <ShellContent Route="ClientesPage" ContentTemplate="{DataTemplate local:ClientesPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="SALIR" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem Text="Salir" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked" IconImageSource="outline_logout_24dp.png">
     </MenuItem>
 
     <!--
