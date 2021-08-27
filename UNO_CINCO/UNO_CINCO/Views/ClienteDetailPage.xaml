@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:UNO_CINCO.ViewModels" x:DataType="viewmodels:ClienteDetailViewModel"
              x:Class="UNO_CINCO.Views.ClienteDetailPage"
-             Title="{Binding Title}">
+             Title="CLIENTE">
 
     <StackLayout Spacing="20" Padding="15">
         <Label Text="Codigo:" FontSize="Medium" />
@@ -11,7 +11,9 @@
         <Label Text="{Binding Nombre}" FontSize="Small"/>
         <Label Text="Email:" FontSize="Medium" />
         <Label Text="{Binding Email}" FontSize="Small"/>
-        <Label Text="Telf:" FontSize="Medium" />
+        <Label Text="Telf1:" FontSize="Medium" />
+        <Label Text="{Binding Telefono1}" FontSize="Small"/>
+        <Label Text="Telf2:" FontSize="Medium" />
         <Label Text="{Binding Telefono1}" FontSize="Small"/>
     </StackLayout>
     

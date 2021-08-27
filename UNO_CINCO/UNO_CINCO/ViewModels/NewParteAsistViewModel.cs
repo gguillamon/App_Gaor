@@ -9,7 +9,7 @@ namespace UNO_CINCO.ViewModels
     class NewParteAsistViewModel : BaseViewModel
     {
         private string itemId;
-        private string idParte;
+        private int idParte;
         private string codigoEmpresa;
         private string usuario;
         private DateTime inicio;
@@ -26,7 +26,7 @@ namespace UNO_CINCO.ViewModels
 
 
        
-        public string IdParte
+        public int IdParte
         {
             get => idParte;
             set => SetProperty(ref idParte, value);
@@ -105,8 +105,8 @@ namespace UNO_CINCO.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(IdParte)
-                && !String.IsNullOrWhiteSpace(CodigoEmpresa);
+            return !String.IsNullOrWhiteSpace(usuario)
+                && !String.IsNullOrWhiteSpace(descripcion);
         }
         
 

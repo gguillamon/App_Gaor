@@ -9,8 +9,8 @@ namespace UNO_CINCO.ViewModels
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ParteAsistDetailViewModel : BaseViewModel
     {
-        private string itemId;
-        private string idParte;
+        private int itemId;
+        private int idParte;
         private string codigoEmpresa;
         private string usuario;
         private DateTime inicio;
@@ -26,7 +26,7 @@ namespace UNO_CINCO.ViewModels
 
 
 
-        public string ItemId
+        public int ItemId
         {
 
             get
@@ -39,7 +39,7 @@ namespace UNO_CINCO.ViewModels
                 LoadItemId(value);
             }
         }
-        public string IdParte
+        public int IdParte
         {
             get => idParte;
             set => SetProperty(ref idParte, value);
@@ -108,7 +108,7 @@ namespace UNO_CINCO.ViewModels
         }
        
 
-        public async void LoadItemId(string itemId)
+        public async void LoadItemId(int itemId)
         {
             try
             {

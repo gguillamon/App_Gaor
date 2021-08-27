@@ -2,43 +2,44 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UNO_CINCO.Views.ClientesPage"
-             Title="{Binding Title}"
+             Title="Clientes"
              xmlns:local="clr-namespace:UNO_CINCO.ViewModels"  
-             xmlns:model="clr-namespace:UNO_CINCO.Models"  
+             xmlns:model="clr-namespace:UNO_CINCO.Models" x:DataType="local:ClientesViewModel"
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Agregar" Command="{Binding AddItemCommand}" />
+        <ToolbarItem Text="Agregar" Command="{Binding NuevoCliAsync}" />
     </ContentPage.ToolbarItems>
     <!--
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
       https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
     -->
-    <RefreshView x:DataType="local:ClientesViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-        <CollectionView x:Name="ItemsListView"
-                ItemsSource="{Binding Items}"
-                SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:Clientes">
-                        <Label Text="{Binding Codigo}" 
-                            LineBreakMode="NoWrap" 
-                            Style="{DynamicResource ListItemTextStyle}" 
-                            FontSize="16" />
-                        <Label Text="{Binding Nombre}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer 
-                                NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ClientesViewModel}}, Path=ItemTapped}"		
-                                CommandParameter="{Binding .}">
-                            </TapGestureRecognizer>
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </RefreshView>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding ListViewSource}"
+                      HasUnevenRows="True"
+                      IsPullToRefreshEnabled="True"
+                      IsRefreshing="True"
+                      x:Name="ListViewName"
+                      ItemSelected="ListViewName_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Nombre}" FontSize="20"></Label>
+                                <Label Text="{Binding Email}" FontSize="20"></Label>
+                                <Label Text="{Binding Telefono1}" FontSize="20"></Label>
+                                <Label Text="{Binding Telefono2}" FontSize="20"></Label>
+
+                            </StackLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

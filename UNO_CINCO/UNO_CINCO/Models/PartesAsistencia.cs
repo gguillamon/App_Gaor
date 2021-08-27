@@ -6,7 +6,7 @@ namespace UNO_CINCO.Models
 {
     public class PartesAsistencia
     {
-        public string IdParte { get; set; }
+        public int IdParte { get; set; }
         public string CodigoEmpresa { get; set; }
         public string Usuario { get; set; }
         public DateTime Inicio { get; set; }

@@ -14,19 +14,18 @@ namespace UNO_CINCO.Views
 {
     public partial class ClientesPage : ContentPage
     {
-        ClientesViewModel _viewModel;
+        
 
         public ClientesPage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ClientesViewModel();
+            BindingContext =  new ClientesViewModel();
+        }
+        public async void  ListViewName_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            await Navigation.PushAsync(new ClienteDetailPage(e.SelectedItem as Clientes));
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            _viewModel.OnAppearing();
-        }
     }
 }

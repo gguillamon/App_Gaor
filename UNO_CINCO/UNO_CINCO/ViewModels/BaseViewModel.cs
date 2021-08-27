@@ -12,6 +12,8 @@ namespace UNO_CINCO.ViewModels
     {
         public IDataStore<Clientes> DataStore => DependencyService.Get<IDataStore<Clientes>>();
         public IDataStore<PartesAsistencia> DataStorePartes => DependencyService.Get<IDataStore<PartesAsistencia>>();
+        public IDataToFireBase<Clientes> DataStoreFire => DependencyService.Get<IDataToFireBase<Clientes>>();
+        public IDataToFireBase<PartesAsistencia> DataPartesFire => DependencyService.Get<IDataToFireBase<PartesAsistencia>>();
 
 
 

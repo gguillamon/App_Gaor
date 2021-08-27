@@ -1,5 +1,6 @@
 ﻿using System;
 using UNO_CINCO.Services;
+using UNO_CINCO.ViewModels;
 using UNO_CINCO.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,8 +14,10 @@ namespace UNO_CINCO
         {
             InitializeComponent();
 
-            DependencyService.Register<ClienteService>();
-            MainPage = new AppShell();
+           
+
+             MainPage = new AppShell();
+           /* MainPage = new NavigationPage(new PaginaListaClientes());*/
         }
 
         protected override void OnStart()
